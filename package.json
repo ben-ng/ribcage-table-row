@@ -1,6 +1,6 @@
 {
   "name": "ribcage-table-row",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple table row for ribcage-ui",
   "main": "row.js",
   "dependencies": {
@@ -24,6 +24,10 @@
     "url": "git://github.com/ben-ng/ribcage-table-row.git"
   },
   "keywords": [
+    "ribcage",
+    "collection",
+    "table",
+    "row",
     "ribcage-view",
     "ribcage-ui",
     "backbone"
