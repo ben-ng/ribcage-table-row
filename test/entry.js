@@ -14,7 +14,12 @@ describe('A Single Row With An Index', function () {
 
   it('should not throw when initialized with an index', function () {
     assert.doesNotThrow(function () {
-      instances.viewInstance = new Row({index: 0});
+      instances.viewInstance = new Row({
+        index: 0
+      , onClick: function () {
+          instances.clicked = true;
+        }
+      });
     });
   });
 
@@ -32,6 +37,28 @@ describe('A Single Row With An Index', function () {
     assert.equal(row.innerHTML, '');
     assert.equal(row.className.split(' ').length, 1);
     assert.ok(row.className.split(' ').indexOf('ribcage-table-row') >= 0);
+  });
+
+  it('should trigger an event when clicked', function (done) {
+    var failTimeout;
+
+    failTimeout = setTimeout(function () {
+      done(new Error('The click event did not fire'));
+    }, 0);
+
+    instances.viewInstance.once('click', function () {
+      clearTimeout(failTimeout);
+
+      // This is from the onClick function we passed when constructing
+      // the row
+      assert.strictEqual(instances.clicked, true);
+
+      delete instances.clicked;
+
+      done();
+    });
+
+    instances.viewInstance.$el.click();
   });
 
   it('should detach when closed', function () {

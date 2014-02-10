@@ -13,9 +13,17 @@ npm install ribcage-table-row
 
 ```javascript
 
-  var Row = require('ribcage-table-row')
+  var Row = require('ribcage-table-row');
 
-  var row = new Row({text: 'Hello World'})
+  var row = new Row({
+    text: 'Hello World'
+
+    // Optional
+  , onClick: function noop () {}
+  });
+
+  // There is also a click event if you would rather use that
+  row.on('click');
 
 ```
 
