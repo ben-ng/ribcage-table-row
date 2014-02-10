@@ -19,6 +19,12 @@ npm install ribcage-table-row
 
 ```
 
+## Tests
+
+A successful test run should look something like this:
+
+![Reference Image](https://github.com/ben-ng/ribcage-table-row/raw/master/test/reference.png)
+
 ## License
 
 The MIT License
