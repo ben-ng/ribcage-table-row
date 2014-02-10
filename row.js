@@ -8,6 +8,7 @@ Row = Base.extend({
 
     this.options = opts;
   }
+, className: 'ribcage-table-row'
 , template: function () {
     return 'Row ' + this.options.index;
   }

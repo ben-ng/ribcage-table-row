@@ -35,6 +35,8 @@ describe('A Single Row', function () {
     row = fixture.children[0];
     assert.equal(row.tagName, 'DIV');
     assert.equal(row.innerHTML, 'Row 0');
+    assert.equal(row.className.split(' ').length, 1);
+    assert.ok(row.className.split(' ').indexOf('ribcage-table-row') >= 0);
   });
 
   it('should detach when closed', function () {

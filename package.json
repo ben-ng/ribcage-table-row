@@ -1,10 +1,10 @@
 {
   "name": "ribcage-table-row",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple table row for ribcage-ui",
   "main": "row.js",
   "dependencies": {
-    "ribcage-view": "~0.0.14"
+    "ribcage-view": "Techwraith/ribcage-view"
   },
   "devDependencies": {
     "atomify-js": "~0.2.0",
