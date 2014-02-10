@@ -268,7 +268,9 @@ body {
     position: absolute;
   }
 }
-;.ribcage-table-row {
+
+
+.ribcage-table-row {
   position: relative;
   height: 44px;
   border-bottom: 1px solid #CCC;

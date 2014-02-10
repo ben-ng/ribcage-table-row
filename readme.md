@@ -15,9 +15,7 @@ npm install ribcage-table-row
 
   var Row = require('ribcage-table-row')
 
-  var row = new Row({index: 0})
-
-  // See tests for more complex examples
+  var row = new Row({text: 'Hello World'})
 
 ```
 

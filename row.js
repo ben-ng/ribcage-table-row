@@ -3,14 +3,14 @@ var Base = require('ribcage-view')
 
 Row = Base.extend({
   afterInit: function (opts) {
-    if(opts.index == null)
-      throw new Error('This row must be initialized with an index');
-
-    this.options = opts;
+    this.options = opts || {};
   }
 , className: 'ribcage-table-row'
 , template: function () {
-    return 'Row ' + this.options.index;
+    if(this.options.text != null)
+      return this.options.text;
+
+    return '';
   }
 });
 
